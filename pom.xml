@@ -15,7 +15,7 @@
     </properties>
 
     <build>
-        <sourceDirectory>main/java</sourceDirectory>
+        <sourceDirectory>leetcode</sourceDirectory>
         <testSourceDirectory>test/java</testSourceDirectory>
     </build>
 
