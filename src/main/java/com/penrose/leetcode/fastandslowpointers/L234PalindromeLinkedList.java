@@ -14,8 +14,26 @@ public class L234PalindromeLinkedList {
 
         }
 
-        System.out.println("MIDDLE --> " + slow.val);
+        ListNode prev = null;
+        ListNode curr = slow;
+        ListNode next = null;
 
-        return false;
+        while (curr!=null){
+            next = curr.next;
+            curr.next = prev;
+
+            prev = curr;
+            curr = next;
+        }
+
+        while (prev != null && head !=null){
+            if(prev.val != head.val){
+                return false;
+            }
+            prev = prev.next;
+            head = head.next;
+        }
+
+        return true;
     }
 }
